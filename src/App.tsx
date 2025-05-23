@@ -17,7 +17,7 @@ const { StorageBrowser } = createStorageBrowser({
 function App() {
   return (
     <>
-      <h1>Hello from {process.env.REACT_APP_USER_REGION}</h1>
+      <h1>Hello from {import.meta.env.VITE_USER_REGION}</h1>
       <Authenticator>
         {({ signOut, user }) => (
           <>
