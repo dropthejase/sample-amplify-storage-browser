@@ -16,18 +16,20 @@ const { StorageBrowser } = createStorageBrowser({
 
 function App() {
   return (
-    <h1>Hello from {process.env.REACT_APP_USER_REGION}</h1>
-    <Authenticator>
-      {({ signOut, user }) => (
-        <>
-          <div className="header">
-            <h1>{`Hello ${user?.username}`}</h1>
-            <Button onClick={signOut}>Sign out</Button>
-          </div>
-          <StorageBrowser />
-        </>
-      )}
-    </Authenticator>
+    <>
+      <h1>Hello from {process.env.REACT_APP_USER_REGION}</h1>
+      <Authenticator>
+        {({ signOut, user }) => (
+          <>
+            <div className="header">
+              <h1>{`Hello ${user?.username}`}</h1>
+              <Button onClick={signOut}>Sign out</Button>
+            </div>
+            <StorageBrowser />
+          </>
+        )}
+      </Authenticator>
+    </>
   );
 }
 
